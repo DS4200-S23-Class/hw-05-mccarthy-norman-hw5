@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+}
+
+#columns {
+    display: flex;
+    width: 100%;
+}
+
+#left_col {
+    width: 60%;
+}
+
+#right_col {
+    width: 40%;
+}
+
+.highlight {
+    fill: yellow;
+}
+
+.no-highlight {
+    fill: black;
+}
+
+.centered {
+    text-align: center;
+}
