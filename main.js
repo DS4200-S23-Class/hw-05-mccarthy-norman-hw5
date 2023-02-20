@@ -12,6 +12,7 @@ const FRAME1 = d3.select("#vis1")
 
 const csvData1 = d3.csv("data/scatter-data.csv");
 
+// plots points as scatterplot
 function plotPoints(data) {
     const MAX_X = d3.max(data, (d) => {
       return parseInt(d.x);
@@ -58,7 +59,7 @@ function plotPoints(data) {
         point.attr('class') === 'clicked' ? point.attr('class', 'unclicked') : point.attr('class', 'clicked');
     })
 
-    return [X_SCALE, Y_SCALE];
+    return [X_SCALE, Y_SCALE]; // returns to use for axes
 }
 
 function buildScatterPlot() {
@@ -87,11 +88,11 @@ function buildScatterPlot() {
         xValue = xValue.options[xValue.selectedIndex].value; // gets x-coord value from dropdown
         yValue = yValue.options[yValue.selectedIndex].value; // gets y-coord value from dropdown
         const svg = d3.select("svg");
-        svg.selectAll("circle").remove();
+        svg.selectAll("circle").remove(); // removes points so they don't plot multiple times
         const newData = [
           ...Array.from(data),
           { x: parseInt(xValue), y: parseInt(yValue) },
-        ];
+        ]; // adds point to existing points and replots
         plotPoints(newData);
       }
 
@@ -110,6 +111,7 @@ const FRAME2 = d3.select("#vis2")
 
 const csvData2 = d3.csv("data/bar-data.csv");
 
+// plots bar chart
 function buildBarPlot() {
     csvData2.then((data) => {
         console.log(data);
