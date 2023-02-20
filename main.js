@@ -172,6 +172,7 @@ function buildBarPlot() {
         function handleMouseover(event, d) {
           // on mouseover, make opaque
           TOOLTIP.style("opacity", 1);
+          d3.select(this).attr("fill", "yellow");
         }
 
         function handleMousemove(event, d) {
@@ -185,6 +186,7 @@ function buildBarPlot() {
         function handleMouseleave(event, d) {
           // on mouseleave, make transparant again
           TOOLTIP.style("opacity", 0);
+          d3.select(this).attr("fill", "black");
         }
 
         // Add event listeners
