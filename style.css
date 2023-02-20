@@ -15,12 +15,9 @@ body {
     width: 40%;
 }
 
-.highlight {
-    fill: yellow;
-}
-
-.no-highlight {
-    fill: black;
+.clicked {
+    stroke-width: 5;
+    stroke: gray;
 }
 
 .centered {
