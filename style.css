@@ -23,3 +23,12 @@ body {
 .centered {
     text-align: center;
 }
+
+.tooltip {
+    position: absolute;
+    background-color: grey;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
